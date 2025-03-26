@@ -1,4 +1,4 @@
-#!/usr/bin/perl
+#!/usr/bin/env perl
 
 # Calculate the highest possible location for an overlay based
 # on a reference map file (.refmap)

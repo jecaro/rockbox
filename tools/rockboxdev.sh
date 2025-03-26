@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Abort execution as soon as an error is encountered
 # That way the script do not let the user think the process completed correctly
@@ -521,7 +521,7 @@ build() {
     cd build-$toolname
 
     echo "ROCKBOXDEV: $toolname/configure"
-    CFLAGS='-U_FORTIFY_SOURCE -fgnu89-inline -fcommon -O2' CXXFLAGS="-std=gnu++03 $EXTRA_CXXFLAGS" run_cmd "$logfile" ../$toolname-$version/configure --target=$target --prefix=$prefix --disable-docs $configure_params
+    CFLAGS='-U_FORTIFY_SOURCE -fgnu89-inline -fcommon -O2 -Wno-format-security' CXXFLAGS="-std=gnu++03 $EXTRA_CXXFLAGS -Wno-format-security" run_cmd "$logfile" ../$toolname-$version/configure --target=$target --prefix=$prefix --disable-docs $configure_params
 
     echo "ROCKBOXDEV: $toolname/make"
     run_cmd "$logfile" $make $make_parallel

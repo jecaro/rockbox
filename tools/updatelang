@@ -1,4 +1,4 @@
-#!/usr/bin/perl -s -w
+#!/usr/bin/env -S perl -s
 #             __________               __   ___.
 #   Open      \______   \ ____   ____ |  | _\_ |__   _______  ___
 #   Source     |       _//  _ \_/ ___\|  |/ /| __ \ /  _ \  \/  /
@@ -8,6 +8,7 @@
 #
 # Copyright (C) 2020-2024 Solomon Peachy
 #
+use warnings;
 
 use utf8;
 use File::Basename;
